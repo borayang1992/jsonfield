@@ -19,7 +19,7 @@ DEFAULT_LOAD_KWARGS = {}
 class JSONFieldMixin(models.Field):
     form_class = forms.JSONField
 
-    def __init__(self, *args, dump_kwargs=None, load_kwargs=None, **kwargs):
+    def __init__(self, dump_kwargs=None, load_kwargs=None, *args, **kwargs):
         self.dump_kwargs = DEFAULT_DUMP_KWARGS if dump_kwargs is None else dump_kwargs
         self.load_kwargs = DEFAULT_LOAD_KWARGS if load_kwargs is None else load_kwargs
 
